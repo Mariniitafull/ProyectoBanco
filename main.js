@@ -2,13 +2,13 @@
 const gestor1 = {
     id: 1,
     usuario: 'gestor1',
-    passwrod: 'gestor1',
+    password: 'gestor1',
     correo: 'gestor1@gmail.com'
 };
 const gestor2 = {
     id: 2,
     usuario: 'gestor2',
-    passwrod: 'gestor2',
+    password: 'gestor2',
     correo: 'gestor2@gmail.com'
 };
 
@@ -39,3 +39,30 @@ const cliente2 = {
 // }
 console.log(gestor2);
 console.table(cliente2);
+/* ********************************************************************************* */
+/*
+Escribe un programa que almacene los objetos creados en el ejercio anterior del proyecto dentro de un array (un array por cada modelo de datos). A continuación, recorre cada uno de los arrays y muestra todas propiedades..
+*/
+
+const gestores = [gestor1, gestor2];
+const clientes = [cliente1, cliente2];
+//gestores es un array
+//gestor es un objeto con las propiedades: id, usuario, password, email
+console.log('GESTORES');
+for (const gestor of gestores){
+    console.log(`id: ${gestor.id}`);
+    console.log(`usuario: ${gestor.usuario}`);
+    console.log(`password: ${gestor.password}`);
+    console.log(`correo: ${gestor.correo}`);
+    console.log('-----');
+}
+console.log('CLIENTES');
+for (const cliente of clientes){
+    console.log(`id: ${cliente.id}`);
+    console.log(`id_gestor: ${cliente.id_gestor}`);
+    console.log(`usuario: ${cliente.usuario}`);
+    console.log(`password: ${cliente.password}`);
+    console.log(`correo: ${cliente.correo}`);
+    console.log(`saldo: ${cliente.saldo}`);
+    console.log('-----');
+}
